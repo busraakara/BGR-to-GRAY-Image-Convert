@@ -28,6 +28,8 @@ $`GRAY = 0.21×R+0.72×G+0.07×B`$
 
 Here, $`R`$, $`G`$, and $`B`$ represent the red, green, and blue color channels of the image. This formula gives more realistic grayscale images compared to other methods like averaging the RGB values.
 
+### !!! Luminosity is not the only method for converting BGR images to Grayscale. You will see, i added 1 more method in my code with different ratio.
+
 # How to Convert a BGR Image to Grayscale?
 In digital image processing, a common task is converting a color image (in BGR format) to grayscale. The BGR format is widely used in image processing libraries such as OpenCV, where the channels are ordered as Blue, Green, and Red.
 
