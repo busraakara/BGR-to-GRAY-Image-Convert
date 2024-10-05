@@ -24,47 +24,18 @@ Each colorspace is suited for specific image processing tasks, and choosing the 
 # What is the Luminosity Method?
 The luminosity method is a technique used to convert a colored image to grayscale by taking into account the varying sensitivity of the human eye to different colors. Human eyes perceive green more strongly than red and blue, so the green component is weighted more heavily when converting to grayscale. The luminosity method typically uses the following formula:
 
-𝐺
-𝑟
-𝑎
-𝑦
-=
-0.21
-×
-𝑅
-+
-0.72
-×
-𝐺
-+
-0.07
-×
-𝐵
-Gray=0.21×R+0.72×G+0.07×B
-Here, R, G, and B represent the red, green, and blue color channels of the image. This formula gives more realistic grayscale images compared to other methods like averaging the RGB values.
+$`GRAY = 0.21×R+0.72×G+0.07×B`$
+
+Here, $`R`$, $`G`$, and $`B`$ represent the red, green, and blue color channels of the image. This formula gives more realistic grayscale images compared to other methods like averaging the RGB values.
 
 # How to Convert a BGR Image to Grayscale?
 In digital image processing, a common task is converting a color image (in BGR format) to grayscale. The BGR format is widely used in image processing libraries such as OpenCV, where the channels are ordered as Blue, Green, and Red.
 
 To convert a BGR image to grayscale, follow these steps:
 
-Access the BGR channels: Each pixel in the image has three values, corresponding to the intensity of the blue, green, and red components.
-Apply the Luminosity formula: Using the weights for blue, green, and red, calculate the grayscale value for each pixel. This is done by applying the following formula:
-𝐺
-𝑟
-𝑎
-𝑦
-=
-0.07
-×
-𝐵
-+
-0.72
-×
-𝐺
-+
-0.21
-×
-𝑅
-Gray=0.07×B+0.72×G+0.21×R
-Replace BGR with a single channel: After calculating the grayscale values, you’ll now have a single intensity value for each pixel, replacing the three-channel BGR values.
+-Access the BGR channels: Each pixel in the image has three values, corresponding to the intensity of the blue, green, and red components.
+-Apply the Luminosity formula: Using the weights for blue, green, and red, calculate the grayscale value for each pixel. This is done by applying the following formula:
+
+$`GRAY = 0.21×R+0.72×G+0.07×B`$
+
+-Replace BGR with a single channel: After calculating the grayscale values, you’ll now have a single intensity value for each pixel, replacing the three-channel BGR values.
